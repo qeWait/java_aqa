@@ -19,8 +19,14 @@ public class User {
     private String name;
 
     @Column(name = "role")
-    private String role;
+    @Enumerated(EnumType.STRING)
+    private Role role;
 
     @Column(name = "created_at")
     private Date insertTime;
+
+    public User(String name, Role role){
+        this.name = name;
+        this.role = role;
+    }
 }
