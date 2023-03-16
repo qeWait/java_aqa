@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal" created-in="IU-223.8617.56">
+    <data-source name="hibernate.cfg.xml/Hibernate" uuid="f4d01891-c6aa-486d-b28a-bd8b5d51a6d5">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
+      <user-name>java_aqa</user-name>
+      <schema-mapping />
+    </data-source>
+    <data-source name="java_aqa/Hibernate" uuid="55d91995-f66c-4dd9-8fec-b6010094a20c">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
+      <user-name>java_aqa</user-name>
+      <schema-mapping />
+    </data-source>
+  </component>
+</project>

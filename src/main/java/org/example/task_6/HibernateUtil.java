@@ -19,7 +19,7 @@ public class HibernateUtil {
         try {
             Properties hibernateProps = new Properties();
             hibernateProps.put(Environment.DRIVER, "com.mysql.cj.jdbc.Driver");
-            hibernateProps.put(Environment.URL, "jdbc:mysql://?/java_aqa?allowPublicKeyRetrieval=true&useSSL=false");
+            hibernateProps.put(Environment.URL, "jdbc:mysql://95.217.132.60:7777/java_aqa?allowPublicKeyRetrieval=true&useSSL=false");
             hibernateProps.put(Environment.USER, "java_aqa");
             hibernateProps.put(Environment.PASS, "7J4ajWPCJL7EsWa2");
 
