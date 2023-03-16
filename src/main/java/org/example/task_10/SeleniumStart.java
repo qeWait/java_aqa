@@ -8,7 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class SeleniumStart {
     public static void main(String[] args) {
-        System.setProperty("webdriver.chrome.driver","driver/chromedriver");
+//        System.setProperty("webdriver.chrome.driver","driver/chromedriver");
 //        WebDriver driver = new ChromeDriver();
 //        driver.get("https://www.google.com");
 
@@ -17,7 +17,7 @@ public class SeleniumStart {
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--remote-allow-origins=*");
         WebDriver cDriver = new ChromeDriver(chromeOptions);
-        cDriver.get("https//jsonplaceholder.typicode.com");
+        cDriver.get("https//www.google.com");
 
         cDriver.close();
         cDriver.quit();
