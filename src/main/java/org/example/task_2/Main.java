@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter height of a rectangle (it can be like 11.3 or 10.0)");

@@ -9,11 +9,17 @@ public class Rectangle {
         this.height = height;
     }
 
-    public double area(){
+    public double area() throws Exception {
+        if (this.height <= 0 || this.width <= 0) {
+            throw new IllegalArgumentException("Height or width in rectangle can`t be 0 or less");
+        }
         return this.width*this.height;
     }
 
-    public double perimeter(){
+    public double perimeter() throws Exception {
+        if (this.height <= 0 || this.width <= 0) {
+            throw new IllegalArgumentException("Height or width in rectangle can`t be 0 or less");
+        }
         return this.height + this.width + this.height + this.width;
     }
 

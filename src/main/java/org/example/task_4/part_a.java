@@ -5,7 +5,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class part_a {
-//    Use a CountDownLatch to wait for a set of threads to complete before continuing execution in the main thread.
+    //Use a CountDownLatch to wait for a set of threads to complete before continuing execution in the main thread.
     public static void main(String[] args) throws InterruptedException {
         int threads = 5;
         CountDownLatch latch = new CountDownLatch(threads);
