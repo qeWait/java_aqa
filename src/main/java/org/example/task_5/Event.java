@@ -2,6 +2,7 @@ package org.example.task_5;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -11,6 +12,7 @@ import java.util.Map;
 public class Event implements Serializable {
 
     @JsonProperty("event")
+    @JacksonXmlProperty()
     private String name;
     private String time;
     private ArrayList<String> guests;
@@ -24,6 +26,15 @@ public class Event implements Serializable {
                 ", guests=" + guests +
                 ", address=" + address +
                 '}';
+    }
+
+    public Event() {}
+
+    public Event(String name, String time, ArrayList<String> guests, Map address) {
+        this.name = name;
+        this.time = time;
+        this.guests = guests;
+        this.address = address;
     }
 
     public String getName() {

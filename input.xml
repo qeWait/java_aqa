@@ -1,0 +1,15 @@
+<event>
+    <name>Birthday Party</name>
+    <time>19:45:00</time>
+    <guests>
+        <guest>Alice</guest>
+        <guest>Bob</guest>
+        <guest>David</guest>
+        <guest>Emily</guest>
+    </guests>
+    <address>
+        <street>234 Elm St</street>
+        <city>Boston</city>
+        <state>MA</state>
+    </address>
+</event>
