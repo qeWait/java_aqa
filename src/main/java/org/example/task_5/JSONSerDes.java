@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class SerDes {
+public class JSONSerDes {
 
     public static void main(String[] args) throws IOException {
         Event event = new Event();
@@ -34,6 +34,8 @@ public class SerDes {
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.writeValue(new File("output.json"), event);
 
+        Event event1 = objectMapper.readValue(new File("input.json"), Event.class);
+        System.out.println(event1);
 
     }
 

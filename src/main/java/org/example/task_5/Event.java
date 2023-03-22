@@ -1,5 +1,8 @@
 package org.example.task_5;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -7,6 +10,7 @@ import java.util.Map;
 
 public class Event implements Serializable {
 
+    @JsonProperty("event")
     private String name;
     private String time;
     private ArrayList<String> guests;

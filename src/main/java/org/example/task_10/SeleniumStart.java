@@ -29,7 +29,7 @@ public class SeleniumStart {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
         WebDriver cDriver = new ChromeDriver(options);
-        cDriver.get("https://www.dummyart.com/");
+        cDriver.get("https://demoqa.com/");
 
         WebElement img = cDriver.findElement(By.xpath("/html/body/div[7]/div/div/div[2]/section/div/div/div/div[1]/div[3]/div/div[1]"));
         System.out.println(img.isDisplayed());

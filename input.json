@@ -1,0 +1,10 @@
+{
+  "event": "Birthday Party",
+  "time": "19:45:00",
+  "guests": ["Alice", "Bob", "David", "Emily"],
+  "address": {
+    "street": "234 Elm St",
+    "city": "Boston",
+    "state": "MA"
+  }
+}
