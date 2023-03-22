@@ -62,6 +62,7 @@ public class SeleniumStart {
         WebElement form = driver.findElement(By.xpath("//*[@id=\"userForm\"]"));
         form.submit();
 
+        
         driver.close();
         driver.quit();
     }
