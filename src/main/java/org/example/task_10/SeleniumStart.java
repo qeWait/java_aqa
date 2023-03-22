@@ -27,14 +27,14 @@ public class SeleniumStart {
         //Setup ChromeDriver using DriverManager.
         
         
-//        ChromeDriverManager.getInstance().setup();
-//        ChromeOptions options = new ChromeOptions();
-//        options.addArguments("--remote-allow-origins=*");
-//        WebDriver driver = new ChromeDriver(options);
-        EdgeDriverManager.getInstance().setup();
-        EdgeOptions options = new EdgeOptions();
+        ChromeDriverManager.getInstance().setup();
+        ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
-        WebDriver driver = new EdgeDriver(options);
+        WebDriver driver = new ChromeDriver(options);
+//        EdgeDriverManager.getInstance().setup();
+//        EdgeOptions options = new EdgeOptions();
+//        options.addArguments("--remote-allow-origins=*");
+//        WebDriver driver = new EdgeDriver(options);
         //go to the page from your variant
         driver.get("https://demoqa.com/elements");
 
