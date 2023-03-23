@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58a6271e-dbd1-4f49-9413-bdf3a3a02c48" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/task_6/Entity/Event.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example_test/task_2_test/DataProviderRectangleTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example_test/task_2_test/ParametrizedRectangleTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example_test/task_2_test/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/task_2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/task_2/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/task_2/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/task_2/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/task_6/HibernateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/task_6/HibernateUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example_test/task_2_test/RectangleAreaTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example_test/task_2_test/RectanglePerimeterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example_test/task_2_test/RectangleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/testng.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +172,7 @@
       <workItem from="1679510394810" duration="935000" />
       <workItem from="1679511601230" duration="309000" />
       <workItem from="1679520086118" duration="4865000" />
-      <workItem from="1679556782291" duration="4920000" />
+      <workItem from="1679556782291" duration="5336000" />
     </task>
     <servers />
   </component>
