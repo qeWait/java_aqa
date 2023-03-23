@@ -1,6 +1,6 @@
 # Tasks
 
-[ ] Task 1
+[+] Task 1
 
 [x] Task 2
 
