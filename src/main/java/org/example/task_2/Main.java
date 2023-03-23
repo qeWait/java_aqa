@@ -14,10 +14,10 @@ public class Main {
         System.out.println("Enter width of a rectangle (it can be like 11.3 or 10.0)");
         double width = scanner.nextDouble();
 
-        Rectangle rectangle = new Rectangle(width, height);
+        Rectangle rectangle = new Rectangle();
 
-        System.out.println("Rectangle area: " + rectangle.area());
-        System.out.println("Rectangle perimeter: " + rectangle.perimeter());
+        System.out.println("Rectangle area: " + rectangle.area(width, height));
+        System.out.println("Rectangle perimeter: " + rectangle.perimeter(width, height));
     }
 
 }

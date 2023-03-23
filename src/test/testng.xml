@@ -1,6 +1,9 @@
+<!--Create testng.xml which should execute your test class. Execute this file-->
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="all test SUITE" verbose="5" data-provider-thread-count="6">
-    <parameter name="first-name"  value="Cedric"/>
+    <parameter name="a"  value="2"/>
+    <parameter name="b"  value="2"/>
+    <parameter name="expected"  value="4"/>
     <test name="Tests for Task#2">
         <packages>
             <package name="org.example_test.task_2_test"/>

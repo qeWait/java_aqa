@@ -2,32 +2,19 @@ package org.example.task_2;
 
 public class Rectangle {
 
-    private double width, height;
+    public Rectangle() {}
 
-    public Rectangle(double width, double height) {
-        this.width = width;
-        this.height = height;
-    }
-
-    public double area() throws Exception {
-        if (this.height <= 0 || this.width <= 0) {
+    public double area(double width, double height) throws Exception {
+        if (height <= 0 || width <= 0) {
             throw new IllegalArgumentException("Height or width in rectangle can`t be 0 or less");
         }
-        return this.width*this.height;
+        return width*height;
     }
 
-    public double perimeter() throws Exception {
-        if (this.height <= 0 || this.width <= 0) {
+    public double perimeter(double width, double height) throws Exception {
+        if (height <= 0 || width <= 0) {
             throw new IllegalArgumentException("Height or width in rectangle can`t be 0 or less");
         }
-        return this.height + this.width + this.height + this.width;
-    }
-
-    public double getWidth() {
-        return width;
-    }
-
-    public double getHeight() {
-        return height;
+        return height + width + height + width;
     }
 }

@@ -3,6 +3,7 @@ package org.example.task_6;
 //import org.example.task_6.Entity.Device;
 //import itstep.task_6.entity.Phone;
 //import itstep.task_6.entity.SocialMe/dia;
+import org.example.task_6.Entity.Event;
 import org.example.task_6.Entity.User;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -19,7 +20,7 @@ public class HibernateUtil {
         try {
             Properties hibernateProps = new Properties();
             hibernateProps.put(Environment.DRIVER, "com.mysql.cj.jdbc.Driver");
-            hibernateProps.put(Environment.URL, "jdbc:mysql://95.217.132.60:7777/java_aqa?allowPublicKeyRetrieval=true&useSSL=false");
+            hibernateProps.put(Environment.URL, "jdbc:mysql://87.236.146.47:7394/java_aqa?allowPublicKeyRetrieval=true&useSSL=false");
             hibernateProps.put(Environment.USER, "java_aqa");
             hibernateProps.put(Environment.PASS, "7J4ajWPCJL7EsWa2");
 
@@ -34,8 +35,7 @@ public class HibernateUtil {
             Configuration configuration = new Configuration();
             configuration.setProperties(hibernateProps);
 
-            configuration.addAnnotatedClass(User.class);
-//            configuration.addAnnotatedClass(Phone.class);
+            configuration.addAnnotatedClass(Event.class);
 //            configuration.addAnnotatedClass(Device.class);
 //            configuration.addAnnotatedClass(SocialMedia.class);
 
