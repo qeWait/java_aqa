@@ -8,7 +8,7 @@ import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
-        System.setProperty("https.protocols", "TLSv1,TLSv1.1,TLSv1.2");
+//        System.setProperty("https.protocols", "TLSv1,TLSv1.1,TLSv1.2");
 
 
         User user = new User("Peter", Role.USER);

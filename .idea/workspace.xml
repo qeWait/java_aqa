@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58a6271e-dbd1-4f49-9413-bdf3a3a02c48" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/task_11/HomePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example_test/task_11_test/EndToEndTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/task_6/HibernateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/task_6/HibernateUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/task_6/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/task_6/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +179,12 @@
       <workItem from="1679510394810" duration="935000" />
       <workItem from="1679511601230" duration="309000" />
       <workItem from="1679520086118" duration="4865000" />
-      <workItem from="1679556782291" duration="5336000" />
+      <workItem from="1679556782291" duration="5611000" />
+      <workItem from="1679574217428" duration="643000" />
+      <workItem from="1679581762919" duration="666000" />
+      <workItem from="1679952344028" duration="1931000" />
+      <workItem from="1679984878142" duration="827000" />
+      <workItem from="1680164419894" duration="4944000" />
     </task>
     <servers />
   </component>
@@ -200,6 +212,15 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/example/task_10/SeleniumStart.java</url>
           <line>64</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/org/example_test/task_11_test/EndToEndTest.java</url>
+          <line>84</line>
+          <properties class="org.example_test.task_11_test.EndToEndTest" method="end">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

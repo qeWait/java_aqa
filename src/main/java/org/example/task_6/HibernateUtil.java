@@ -20,11 +20,11 @@ public class HibernateUtil {
         try {
             Properties hibernateProps = new Properties();
             hibernateProps.put(Environment.DRIVER, "com.mysql.cj.jdbc.Driver");
-            hibernateProps.put(Environment.URL, "jdbc:mysql://87.236.146.47:7394/java_aqa?allowPublicKeyRetrieval=true&useSSL=false");
-            hibernateProps.put(Environment.USER, "java_aqa");
-            hibernateProps.put(Environment.PASS, "7J4ajWPCJL7EsWa2");
+            hibernateProps.put(Environment.URL, "jdbc:mysql://localhost:3306/java_aqa");
+            hibernateProps.put(Environment.USER, "root");
+            hibernateProps.put(Environment.PASS, "java_aqa");
 
-            hibernateProps.put(Environment.DIALECT, "org.hibernate.dialect.MySQL5Dialect");
+            hibernateProps.put(Environment.DIALECT, "org.hibernate.dialect.MySQL8Dialect");
 
             hibernateProps.put(Environment.SHOW_SQL, "true");
             hibernateProps.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
@@ -36,6 +36,7 @@ public class HibernateUtil {
             configuration.setProperties(hibernateProps);
 
             configuration.addAnnotatedClass(Event.class);
+            configuration.addAnnotatedClass(User.class);
 //            configuration.addAnnotatedClass(Device.class);
 //            configuration.addAnnotatedClass(SocialMedia.class);
 
