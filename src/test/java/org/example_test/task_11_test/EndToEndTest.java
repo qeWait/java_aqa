@@ -1,6 +1,10 @@
 package org.example_test.task_11_test;
 
 import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
+import org.example.task_11.BookPage;
+import org.example.task_11.HomePage;
+import org.example.task_11.LoginPage;
+import org.example.task_11.ProfilePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -32,53 +36,39 @@ public class EndToEndTest {
         // 5. Add book to collection
         // 6. Check if the book is in the collection
 
-        
-        driver.get("https://demoqa.com/books");
+        HomePage homePage = new HomePage(this.driver);
+
         // 1. Go to login page
-        WebElement goToLoginPageButton = driver.findElement(By.xpath("//*[@id=\"login\"]"));
-        goToLoginPageButton.click();
+        LoginPage loginPage = homePage.openLoginPage();
+        Assert.assertTrue(loginPage.isOpen());
 
         // 2. Login
-        WebElement userNameInput = driver.findElement(By.cssSelector("#userName"));
-        WebElement pwdInput = driver.findElement(By.cssSelector("#password"));
-        WebElement submitLoginButton = driver.findElement(By.cssSelector("#login"));
-
         String userName = "nnn";
         String pwd = "NNNNnnnn1234!";
 
-        userNameInput.sendKeys(userName);
-        pwdInput.sendKeys(pwd);
-        submitLoginButton.click();
+        loginPage.inputUserName(userName).inputPwd(pwd).submit();
 
         // 3. Validate login
         Thread.sleep(1000);
-        WebElement userNameOnPage = driver.findElement(By.xpath("//*[@id=\"userName-value\"]"));
-        Assert.assertEquals(userName, userNameOnPage.getText());
+        Assert.assertTrue(homePage.isLoggedIn(userName));
 
         // 4. Clear collection
-        driver.get("https://demoqa.com/profile");
-        WebElement clearCollectionButton = driver.findElement(By.xpath("/html/body/div[2]/div/div/div[2]/div[2]/div[2]/div[3]/div[3]/button"));
-        clearCollectionButton.click();
-        Thread.sleep(1000);
-        WebElement submitClearCollectionButton = driver.findElement(By.xpath("/html/body/div[4]/div/div/div[3]/button[1]"));
-        submitClearCollectionButton.click();
-        Thread.sleep(1000);
-        driver.switchTo().alert().accept();
-        driver.get("https://demoqa.com/books");
-
+        ProfilePage profilePage = new ProfilePage(this.driver);
+        if (!profilePage.isOpen()) profilePage.open();
+        profilePage.clearCollection();
 
         // 5. Add book to collection
-        WebElement bookItem = driver.findElement(By.cssSelector("#see-book-Git\\ Pocket\\ Guide > a"));
-        bookItem.click();
-        Thread.sleep(1000);
-        WebElement addToCollections = driver.findElement(By.xpath("/html/body/div[2]/div/div/div[2]/div[2]/div[2]/div[2]/div[9]/div[2]/button"));
-        addToCollections.click();
+        BookPage bookPage = homePage.open().openBookPage();
+        if (!bookPage.isOpen()) Thread.sleep(1000);
+        Assert.assertTrue(bookPage.isOpen());
+        bookPage.addBookInCollection();
 
         // 6. Check if the book is in the collection
         Thread.sleep(1000);
-        Assert.assertEquals(driver.switchTo().alert().getText(), "Book added to your collection.");
+        Assert.assertTrue(bookPage.isBookAdded());
         driver.switchTo().alert().accept();
-        driver.get("https://demoqa.com/profile");
+
+        profilePage.open();
     }
 
     @AfterTest
