@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58a6271e-dbd1-4f49-9413-bdf3a3a02c48" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/task_11/BookPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/task_11/LoginPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/task_11/ProfilePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/task_11/bo/DemoqaBO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/task_11/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/task_11/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/task_11/BookPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/task_11/po/BookPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/task_11/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/task_11/po/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/task_11/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/task_11/po/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/task_11/ProfilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/task_11/po/ProfilePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example_test/task_11_test/EndToEndTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example_test/task_11_test/EndToEndTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +184,7 @@
       <workItem from="1679581762919" duration="666000" />
       <workItem from="1679952344028" duration="1931000" />
       <workItem from="1679984878142" duration="827000" />
-      <workItem from="1680164419894" duration="7348000" />
+      <workItem from="1680164419894" duration="8784000" />
     </task>
     <servers />
   </component>
@@ -210,15 +212,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/example/task_10/SeleniumStart.java</url>
           <line>64</line>
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/org/example_test/task_11_test/EndToEndTest.java</url>
-          <line>74</line>
-          <properties class="org.example_test.task_11_test.EndToEndTest" method="end">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

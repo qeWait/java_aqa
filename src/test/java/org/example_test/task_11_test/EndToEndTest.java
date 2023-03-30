@@ -1,12 +1,11 @@
 package org.example_test.task_11_test;
 
 import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
-import org.example.task_11.BookPage;
-import org.example.task_11.HomePage;
-import org.example.task_11.LoginPage;
-import org.example.task_11.ProfilePage;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import org.example.task_11.bo.DemoqaBO;
+import org.example.task_11.po.BookPage;
+import org.example.task_11.po.HomePage;
+import org.example.task_11.po.LoginPage;
+import org.example.task_11.po.ProfilePage;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
@@ -29,46 +28,20 @@ public class EndToEndTest {
     void endToEndTest() throws InterruptedException {
         // target: https://demoqa.com/books
         // description: book store application
-        // 1. Go to login page
-        // 2. Login
-        // 3. Validate login
-        // 4. Clear collection
-        // 5. Add book to collection
-        // 6. Check if the book is in the collection
+        // 1.1. Go to login page
+        // 1.2. Login
+        // 1.3. Validate login
+        // 2. Clear collection
+        // 3. Add book to collection
+        // 3.1. Check if the book is in the collection
 
-        HomePage homePage = new HomePage(this.driver);
+        DemoqaBO demoqaBO = new DemoqaBO(driver);
 
-        // 1. Go to login page
-        LoginPage loginPage = homePage.openLoginPage();
-        Assert.assertTrue(loginPage.isOpen());
-
-        // 2. Login
-        String userName = "nnn";
-        String pwd = "NNNNnnnn1234!";
-
-        loginPage.inputUserName(userName).inputPwd(pwd).submit();
-
-        // 3. Validate login
-        Thread.sleep(1000);
-        Assert.assertTrue(homePage.isLoggedIn(userName));
-
-        // 4. Clear collection
-        ProfilePage profilePage = new ProfilePage(this.driver);
-        if (!profilePage.isOpen()) profilePage.open();
-        profilePage.clearCollection();
-
-        // 5. Add book to collection
-        BookPage bookPage = homePage.open().openBookPage();
-        if (!bookPage.isOpen()) Thread.sleep(1000);
-        Assert.assertTrue(bookPage.isOpen());
-        bookPage.addBookInCollection();
-
-        // 6. Check if the book is in the collection
-        Thread.sleep(1000);
-        Assert.assertTrue(bookPage.isBookAdded());
-        driver.switchTo().alert().accept();
-
-        profilePage.open();
+        demoqaBO
+                .login()
+                .clearCollection()
+                .addBookInCollection()
+                .openCollectionPage();
     }
 
     @AfterTest

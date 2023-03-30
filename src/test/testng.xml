@@ -14,4 +14,9 @@
             <package name="org.example_test.task_10_test"/>
         </packages>
     </test>
+    <test name="Tests for Task#11">
+        <packages>
+            <package name="org.example_test.task_11_test"/>
+        </packages>
+    </test>
 </suite>

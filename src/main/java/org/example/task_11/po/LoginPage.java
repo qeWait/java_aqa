@@ -1,11 +1,7 @@
-package org.example.task_11;
+package org.example.task_11.po;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
-
-import java.util.Objects;
 
 public class LoginPage {
     private WebDriver driver;
@@ -14,6 +10,10 @@ public class LoginPage {
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
+    }
+
+    public void open() {
+        driver.get(URL);
     }
 
     public boolean isOpen(){
