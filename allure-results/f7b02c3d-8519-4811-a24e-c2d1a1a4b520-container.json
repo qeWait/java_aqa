@@ -1,0 +1,1 @@
+{"uuid":"f7b02c3d-8519-4811-a24e-c2d1a1a4b520","name":"java_aqa","children":["65c8cf5b-2c93-4d22-81a2-3877b2c5ba61"],"befores":[{"name":"initProperty","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1683475329453,"stop":1683475329456}],"afters":[],"start":1683475329441,"stop":1683475330210}

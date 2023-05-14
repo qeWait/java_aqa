@@ -1,0 +1,285 @@
+{
+	"info": {
+		"_postman_id": "2ff428b2-1af3-4ea5-beb9-f24b48b26732",
+		"name": "Task 15 / Java AQA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22796341"
+	},
+	"item": [
+		{
+			"name": "Create checklist",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.globals.set(\"api_key\", \"<your api key here>\")",
+							"pm.globals.set(\"api_token\", \"<your api token here>\")",
+							"",
+							"pm.collectionVariables.set(\"myChecklistName\", \"To do\")"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.globals.set(\"checkListId\", pm.response.json().id)",
+							"",
+							"pm.test(\"Check response status\", () => {",
+							"    pm.expect(pm.response.status).to.eql('OK')",
+							"}) ",
+							"pm.test(\"Check checklist name\", () => {",
+							"    pm.expect(pm.response.json().name).to.eql(pm.collectionVariables.get(\"myChecklistName\"))",
+							"}) ",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/checklists?key={{api_key}}&token={{api_token}}&idCard=64578c857507c7928ddaff6e&name={{myChecklistName}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"checklists"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{api_key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{api_token}}"
+						},
+						{
+							"key": "idCard",
+							"value": "64578c857507c7928ddaff6e"
+						},
+						{
+							"key": "name",
+							"value": "{{myChecklistName}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create checkitem",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"myCheckitemName\", \"Do practice\")"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.globals.set(\"checkItemId\", pm.response.json().id)",
+							"pm.test(\"Check response status\", () => {",
+							"    pm.expect(pm.response.status).to.eql('OK')",
+							"}) ",
+							"pm.test(\"Check checkitem name\", () => {",
+							"    pm.expect(pm.response.json().name).to.eql(pm.collectionVariables.get(\"myCheckitemName\"))",
+							"}) ",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/checklists/{{checkListId}}/checkItems?key={{api_key}}&token={{api_token}}&name={{myCheckitemName}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"checklists",
+						"{{checkListId}}",
+						"checkItems"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{api_key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{api_token}}"
+						},
+						{
+							"key": "name",
+							"value": "{{myCheckitemName}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update checklist",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"myChecklistNewName\", \"Tododododo\")"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.globals.set(\"checkItemId\", pm.response.json().id)",
+							"pm.test(\"Check response status\", () => {",
+							"    pm.expect(pm.response.status).to.eql('OK')",
+							"}) ",
+							"pm.test(\"Check checkitem name\", () => {",
+							"    pm.expect(pm.response.json().name).to.eql(pm.collectionVariables.get(\"myCheckitemName\"))",
+							"}) ",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/checklists/{{checkListId}}?key={{api_key}}&token={{api_token}}&name={{myChecklistNewName}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"checklists",
+						"{{checkListId}}"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{api_key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{api_token}}"
+						},
+						{
+							"key": "name",
+							"value": "{{myChecklistNewName}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete checkitem",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"myCheckitemName\", \"Do practice\")"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check response status\", () => {",
+							"    pm.expect(pm.response.status).to.eql('OK')",
+							"}) ",
+							"pm.test(\"Check checklist name\", () => {",
+							"    pm.expect(pm.response.json().name).to.eql(pm.collectionVariables.get(\"myCheckitemName\"))",
+							"}) ",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/checklists/{{checkListId}}/checkItems/{{checkItemId}}?token={{api_token}}&key={{api_key}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"checklists",
+						"{{checkListId}}",
+						"checkItems",
+						"{{checkItemId}}"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "{{api_token}}"
+						},
+						{
+							"key": "key",
+							"value": "{{api_key}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "myChecklistName",
+			"value": ""
+		},
+		{
+			"key": "myCheckitemName",
+			"value": ""
+		},
+		{
+			"key": "myCheckitemNewName",
+			"value": ""
+		},
+		{
+			"key": "myChecklistNewName",
+			"value": ""
+		}
+	]
+}
